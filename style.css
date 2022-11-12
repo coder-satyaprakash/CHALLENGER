@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+    margin:0;
+    padding:0;
+    transition:.3s;
+    font-family:"Poppins", sans-serif;
+    box-sizing:border-box;
+    user-select:none;
+}
+body {
+    height:100vh;
+    width:100vw;
+    background:linear-gradient(120deg, #ff2a5a, blueviolet);
+}
+#intro {
+    height:100vh;
+    width:100vw;
+    background:#151515;
+    z-index:1;
+    top:0;
+    left:0;
+    position:fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#intro #front {
+    position:relative;
+}
+#intro #front, #back {
+    height:200px;
+    width:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#intro #front .loader {
+    height:160px;
+    width:160;
+    position:absolute;
+}
+#intro #front .loader .outer {
+    height:160px;
+    width:160px;
+    padding:20px;
+    border-radius:50%;
+}
+#intro #front .loader .outer .inner {
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#intro #front .loader .outer .inner #number {
+    font-size:1.8em;
+    font-weight:400;
+    letter-spacing:1px;
+    color:transparent;
+    -webkit-background-clip:text;
+    background-image:linear-gradient(120deg, #ff2a5a, blueviolet);
+}
+#intro #front svg {
+    top:0;
+    left:0;
+    transform:rotate(-90deg);
+    position:absolute;
+}
+#intro #front svg circle {
+    fill:none;
+    stroke:url(#GradientColor);
+    stroke-width:8px;
+    stroke-dasharray:450;
+}
+#intro #back {
+    position:absolute;
+    flex-direction:column;
+    justify-content:space-around;
+    color:transparent;
+    -webkit-background-clip:text;
+    padding:20px 0;
+    letter-spacing:1px;
+    transform:scale(0);
+    background-image:linear-gradient(120deg, #ff2a5a, blueviolet);
+}
+#intro #back h1 {
+    font-weight:400;
+}
+@keyframes blur {
+    0% {
+        letter-spacing:10px;
+        filter:blur(10px);
+    }
+    100% {
+        letter-spacing:2px;
+        filter:blur(0px);
+    }
+}
+#touch {
+    height:1.6em;
+    width:1.6em;
+    position:fixed;
+    top:100px;
+    left:100px;
+    z-index:100;
+    border-radius:50%;
+    display:none;
+    animation:touch 0.5s;
+}
+#touch:before {
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    animation:touch_in 0.5s;
+    border-radius:50%;
+}
+@keyframes touch {
+    100%{
+        transform:scale(2);
+        opacity:0;
+    }
+}
+@keyframes touch_in {
+    100%{
+        transform:scale(2);
+        opacity:0;
+    }
+}
+#side {
+    height:100vh;
+    width:60px;
+    top:0;
+    color:#444;
+    font-size:26px;
+    background:#323232;
+    position:fixed;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction:column;
+}
+#side i {
+    color:transparent;
+    -webkit-background-clip:text;
+    background-image:linear-gradient(120deg, #ff2a5a, blueviolet);
+    transform:rotate(360deg);
+}
+#app {
+    position:fixed;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+}
+#home, #me, #settings {
+    height:100vh;
+    width:100vw;
+    background:#151515;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#me, #settings {
+    display:none;
+}

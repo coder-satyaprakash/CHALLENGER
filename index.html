@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#151515" id="theme" />
+        <title>CHALLENGER</title>
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="touch"></div>
+        <div id="intro">
+            <div id="front">
+                <div class="loader">
+                    <div class="outer">
+                        <div class="inner">
+                            <div id="number">0%</div>
+                        </div>
+                    </div>
+                    <svg height="160px" width="160px">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#ff2a5a"></stop>
+                                <stop offset="100%" stop-color="blueviolet"></stop>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="80" cy="80" r="70" strole-linecap="round" id="circle"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div id="back">
+                <h1>CHALLENGER</h1>
+            </div>
+        </div>
+        <aside id="side">
+            <i class="bx bx-home" id="ToHome"></i>
+            <i class="bx bx-sun" id="modes"></i>
+            <i class="bx bx-plus" id="adder"></i>
+            <i class="bx bx-user" id="ToMe"></i>
+            <i class="bx bx-cog" id="ToSet"></i>
+        </aside>
+        <div id="app">
+            <section id="home">
+                Home
+            </section>
+            <section id="me">
+                My Account
+            </section>
+            <section id="settings">
+                Settings
+            </section>
+        </div>
+    </body>
+<script src="script.js"></script>
+</html>
